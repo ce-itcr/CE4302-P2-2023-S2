@@ -1,0 +1,37 @@
+# Quartus Project Files
+*.qpf
+*.qsf
+*.qws
+*.qdf
+*.rpt
+*.smsg
+*.summary
+*.htm
+*.sld
+*.csv
+*.txt
+*.pin
+*.qws
+db/
+incremental_db/
+output_files/
+
+# ModelSim Files
+*.mti
+*.do
+*.mtm
+*.wlf
+*.log
+vsim.wlf
+transcript
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.db
+*.bak
+
+# Quartus Settings File
+*.qws
+*.qdf
