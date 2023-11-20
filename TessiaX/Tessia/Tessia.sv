@@ -11,9 +11,7 @@ module Tessia(
     output logic [1:0] ForwardA, ForwardB,
     output logic [3:0] ALUOP,
     output logic BranchTaken,
-    output logic [3:0] ALUFlagsE0,
-	output logic imageSelector,
-	output logic enableVGAX
+    output logic [3:0] ALUFlagsE0
 );
 
     logic [31:0] InstructionF, InstructionD, ReadData;
@@ -122,8 +120,6 @@ module Tessia(
         .ALUControlD(ALUControlD),
         .ImmSrcD(ImmSrcD), 
         .RegSrcD(RegSrcD),
-        .imageSelector(imageSelector),
-        .enableVGAX(enableVGAX)
     );
 
     Decode #(32) DecodeStage(

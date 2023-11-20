@@ -6,9 +6,7 @@ module ControlUnit #(parameter WIDTH=8)(
     output logic PCSrcD, RegWriteD,
     MemToRegD, MemWriteD, BranchD, ALUSrcD, NoWrite,
     output logic [3:0] ALUControlD,
-    output logic [1:0] ImmSrcD, RegSrcD,
-	output logic imageSelector,
-	output logic enableVGAX
+    output logic [1:0] ImmSrcD, RegSrcD
 );
 	logic [9:0] controls;
 	logic Branch, ALUOp;
@@ -24,55 +22,32 @@ module ControlUnit #(parameter WIDTH=8)(
             
             2'b01:
                 // LDR
-                if (Funct[0]) controls = 10'b0001111000;
+                if (Funct[0]) controls = 10'b0101111000;
                 // STR
                 else controls = 10'b1001110100;
-            
             
             2'b10: 
                 // B
                 controls = 10'b0110100010;
 
-            // VGAX
-            2'b11:
-                controls = 10'b0000000000;
+
 		endcase
 		
-	assign {RegSrcD, ImmSrcD, ALUSrcD, MemToRegD,
-	RegWriteD, MemWriteD, BranchD, ALUOp} = controls;
-
-
-// Execution stage
-  always_ff @(posedge clk) begin
-    if (reset) begin
-      imageSelector <= 0;
-	  enableVGAX <= 0;
-
-    end else begin
-
-      if (Op == 2'b11) begin
-			// Toggle Image Selector
-			if (~Funct[5] && ~Funct[0]) begin 
-				imageSelector <= ~imageSelector;
-			end
-			// Toggle VGA enable
-			if (Funct[5] && Funct[0]) begin
-				enableVGAX <=  ~enableVGAX;
-			end
-    	end
-    end
-  end
+	assign {RegSrcD, ImmSrcD, ALUSrcD, MemToRegD, RegWriteD, MemWriteD, BranchD, ALUOp} = controls;
 
 	// ALU Decoder ***********************************************************************************
 	always_comb
-		if (ALUOp) begin // which DP Instr?
+		if (ALUOp) begin // which Data Processing Instruction?
 			case(Funct[4:1])
-				4'b0100: ALUControlD = 4'b0000; // ADD
-				4'b0010: ALUControlD = 4'b0001; // SUB
-				4'b0000: ALUControlD = 4'b0010; // Multiplication
-				4'b1100: ALUControlD = 4'b0011; // ORR
-				4'b1101: ALUControlD = 4'b0110; // MOV
-				4'b1010: ALUControlD = 4'b0001; // Compare Rs1 Rs2
+				4'b0000: ALUControlD = 4'b0000; // Addition
+				4'b0001: ALUControlD = 4'b0001; // Substraction
+				4'b0010: ALUControlD = 4'b0010; // Multiplication
+				4'b0011: ALUControlD = 4'b0000; // Logical OR
+				4'b0100: ALUControlD = 4'b0000; // Modulus
+				4'b0101: ALUControlD = 4'b0000; // Logical AND
+				4'b0110: ALUControlD = 4'b0110; // Move
+				4'b0111: ALUControlD = 4'b0111; // Divition
+				4'b1000: ALUControlD = 4'b0001; // Compare Ra Rb
 				default: ALUControlD = 4'bx;    // unimplemented
 			endcase
 			
