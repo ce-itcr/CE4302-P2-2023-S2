@@ -1,17 +1,8 @@
 module Tessia(
-    input logic clk, reset,
-    output logic [31:0] ALUResultE,
-    output logic [3:0] ALUFlagsE,
-    output logic [31:0] Instruction,
-    output logic [31:0] WriteData,
-    output logic RegWrite, MemToReg,
-    output logic [3:0] A3,
-    output logic [31:0] WD3, ResultWB,
-    output logic [31:0] SrcA, SrcB,
-    output logic [1:0] ForwardA, ForwardB,
-    output logic [3:0] ALUOP,
-    output logic BranchTaken,
-    output logic [3:0] ALUFlagsE0
+    input logic clk,
+    input logic reset,
+    output logic [31:0] Result,
+    output logic [31:0] A, B
 );
 
     logic [31:0] InstructionF, InstructionD, ReadData;
@@ -20,20 +11,12 @@ module Tessia(
     logic [31:0] PCPlus4;
     logic [3:0] ALUFlags;
 
-    assign Instruction = InstructionD;
-
     logic [31:0] PCF;
 
     logic RegWriteW;
     logic [1:0] RegSrcD;
     logic [3:0] WA3W;
     logic [31:0] RD1, RD2, ExtImmD;
-
-    assign RegWrite = RegWriteW;
-    assign A3 = WA3W;
-    assign WD3 = ResultW;
-    assign ResultWB = ResultW;
-
     logic PCSrcD, RegWriteD, MemToRegD, MemWriteD;
     logic BranchD, ALUSrcD, NoWriteD;
     logic [3:0] ALUControlD;
@@ -47,8 +30,12 @@ module Tessia(
     logic [3:0] FlagsE, CondE;
     logic [31:0] RD1E, RD2E;
     logic [3:0] RA1D, RA2D, RA1E, RA2E;
-    logic [31:0] SrcAE, WriteDataE, ExtImmE;
+    logic [31:0] SrcAE, SrcB, WriteDataE, ExtImmE;
+    logic [31:0] ALUResultE;
 
+    assign A = SrcAE;
+    assign B = SrcB;
+    assign Result = ALUResultE;
 
     logic PCSrcEout, RegWriteEout, MemWriteEout;
 
@@ -58,24 +45,13 @@ module Tessia(
     logic [31:0] ALUOutM, WriteDataM, ReadDataM;
     logic [3:0] WA3M;
 
-    assign WriteData = WriteDataE;
-    assign SrcA = SrcAE;
-
     logic MemToRegW;
-    assign MemToReg = MemToRegW;
     logic [31:0] ReadDataW, ALUOutW;
 
     logic [1:0] ForwardAE, ForwardBE;
 
     logic StallF, StallD, FlushD, FlushE;
     logic BranchTakenE;
-
-    assign ForwardA = ForwardAE;
-    assign ForwardB = ForwardBE;
-    assign ALUOP = ALUControlE;
-    assign BranchTaken = BranchTakenE;
-    assign ALUFlagsE = FlagsE;
-    assign ALUFlagsE0 = ALUFlags;
 
     //***************************** FETCH STAGE ***********************************
     InstructionMemory imem(
@@ -119,7 +95,7 @@ module Tessia(
         .NoWrite(NoWriteD),
         .ALUControlD(ALUControlD),
         .ImmSrcD(ImmSrcD), 
-        .RegSrcD(RegSrcD),
+        .RegSrcD(RegSrcD)
     );
 
     Decode #(32) DecodeStage(

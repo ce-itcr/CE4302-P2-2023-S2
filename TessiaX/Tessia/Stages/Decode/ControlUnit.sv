@@ -29,6 +29,10 @@ module ControlUnit #(parameter WIDTH=8)(
             2'b10: 
                 // B
                 controls = 10'b0110100010;
+			
+			2'b11:
+				// Vector processing
+				controls = 10'b0000000000;
 
 
 		endcase

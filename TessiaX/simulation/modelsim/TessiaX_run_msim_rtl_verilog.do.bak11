@@ -5,11 +5,28 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/utils/adder.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/utils/flopenrc.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/utils/mux2to1.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/utils/mux3to1.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Decode {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Decode/RegisterFile.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Decode {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Decode/ExtendImmediate.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Decode {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Decode/ControlUnit.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Fetch {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Fetch/Fetch.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Decode {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Decode/Decode.sv}
 vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Execute {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Execute/ALU.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Execute {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Execute/ConditionCheck.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Execute {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Execute/ConditionalUnit.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Execute {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Execute/Execute.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Memory {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Memory/DataMemory.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Memory {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/Memory/InstructionMemory.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/WriteBack {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Stages/WriteBack/WriteBack.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Tessia.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Hazards {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Hazards/HazardUnit.sv}
 
-vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Testbench/Stages/Execute {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Testbench/Stages/Execute/ALU_tb.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Testbench {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX/Tessia/Testbench/Tessia_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  Tessia_tb
 
 add wave *
 view structure
