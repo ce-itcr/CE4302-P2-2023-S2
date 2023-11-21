@@ -1,0 +1,34 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Fetch {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Fetch/Fetch.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Decode {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Decode/ControlUnit.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Decode {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Decode/ExtendImmediate.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Decode {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Decode/RegisterFile.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Decode {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Decode/Decode.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Execute {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Execute/ALU.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Execute {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Execute/ConditionalUnit.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Execute {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Execute/ConditionCheck.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Execute {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Execute/Execute.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Memory {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Memory/InstructionMemory.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/WriteBack {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/WriteBack/WriteBack.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/utils/adder.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/utils/flopenrc.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/utils/mux2to1.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/utils/mux3to1.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/TessiaX32.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Hazards {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Hazards/HazardUnit.sv}
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/CPU/Memory {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/CPU/Memory/DataMemory.sv}
+
+vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/Arqui\ 2/CE4302-P2-2023-S2/TessiaX32/Testbenches {C:/Users/kevii/OneDrive/Escritorio/Arqui 2/CE4302-P2-2023-S2/TessiaX32/Testbenches/TessiaX32_tb.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  TessiaX32_tb
+
+add wave *
+view structure
+view signals
+run -all

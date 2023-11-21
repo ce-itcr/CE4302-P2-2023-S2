@@ -1,38 +1,26 @@
 module TessiaX32_tb();
-	logic clk;
+    logic clk;
 	logic reset;
-	logic RegWrite, MemToReg;
-	logic [31:0] ALUResult;
-	logic [3:0] ALUFlags, A3;
-	logic [31:0] Instruction;
-	logic [31:0] WriteData, WD3, ResultWB;
-	logic [31:0] SrcA, SrcB;
-	logic [1:0] ForwardA, ForwardB;
-	logic [3:0] ALUOP;
-	logic BranchTaken;
-	logic [3:0] ALUFlagsE0;
+    logic [31:0] DataToWriteIntoMemory;
+    logic [3:0] RegisterToWrite;
+    logic [31:0] DataToWriteIntoRegister;
+    logic EnableRegisterWrite;
+    logic EnbaleMemoryWrite;
+	logic [31:0] AddressToWriteIntoMemory;
 	
 	// instantiate device to be tested
-	TessiaX32 DUT(
+	TessiaX32 DUT
+	(
 		.clk(clk), 
 		.reset(reset),
-    	.ALUResultE(ALUResult),
-   	.ALUFlagsE(ALUFlags),
-		.Instruction(Instruction),
-		.WriteData(WriteData),
-		.RegWrite(RegWrite),
-		.A3(A3),
-		.WD3(WD3),
-		.MemToReg(MemToReg),
-		.ResultWB(ResultWB),
-		.SrcA(SrcA),
-		.SrcB(SrcB),
-		.ForwardA(ForwardA), 
-		.ForwardB(ForwardB),
-		.ALUOP(ALUOP),
-		.BranchTaken(BranchTaken),
-		.ALUFlagsE0(ALUFlagsE0));
-	
+		.DataToWriteIntoMemory(DataToWriteIntoMemory),
+		.RegisterToWrite(RegisterToWrite),
+		.DataToWriteIntoRegister(DataToWriteIntoRegister),
+		.EnableRegisterWrite(EnableRegisterWrite),
+		.EnbaleMemoryWrite(EnableRegisterWrite),
+		.AddressToWriteIntoMemory(AddressToWriteIntoMemory)
+	);
+
 	// initialize test
 	initial
 	begin
@@ -41,7 +29,7 @@ module TessiaX32_tb();
 
 	integer clk_count = 0;
 	always begin
-		if (clk_count < 100) begin
+		if (clk_count < 400) begin
 			clk <= 1; #5;
 			clk <= 0; #5;
 			clk_count = clk_count + 1;
@@ -51,15 +39,16 @@ module TessiaX32_tb();
 		end
 	end
 
-	// at end of program
-	always @(negedge clk)
+	// Display the key signals
+	always @(EnableRegisterWrite, EnbaleMemoryWrite)
 	begin
-		// $display("The ALU result is: %d, The", ALUResult);
-		if (RegWrite) begin
-			$display("Decode {Reg to Write: %d, Value: %d}", A3, WD3);
+		// TessiaX32 will write a new value to a Register
+		if (EnableRegisterWrite) begin
+			$display("Writing a the value %d into the register %d\n", RegisterToWrite, DataToWriteIntoRegister);
 		end
-			$display("Execute {Operation: %b, SrcA: %d, SrcB: %d, ALUResult: %d, ALUFlagsE0: %b ALUFlagsE: %b, BranchTaken: %d}",ALUOP, SrcA, SrcB, ALUResult,ALUFlagsE0, ALUFlags, BranchTaken);
-			//$display("WriteBack {MemToReg: %d, ResultW: %d}", MemToReg, ResultWB);
-			$display("\n \n");
+		// TessiaX32 will write a new value to memory
+		else if (EnbaleMemoryWrite) begin
+			$display("Writing the value %d into the memory address %d\n", DataToWriteIntoMemory, AddressToWriteIntoMemory);
+		end
 	end
 endmodule
