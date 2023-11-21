@@ -21,11 +21,21 @@ def image_to_binary(image_path):
 
         return binary_pixels
 
-example_image_path = "../Images/VectorImage.jpg" 
+import os
+
+# Obtener la ruta del archivo .py actual
+script_path = os.path.abspath(__file__)
+
+# Obtener el directorio donde reside el archivo .py
+script_directory = os.path.dirname(script_path)
+example_image_path = os.path.join(script_directory, "..", "Images", "VectorImage.png")
+
 binary_pixels = image_to_binary(example_image_path)
 # binary_pixels[:10]  # Displaying the first 10 binary pixels for demonstration purposes
 
-text_file_path = '../ImagesTxt/BN_Image_Test.txt'
+text_file_path = os.path.join(script_directory, "..", "ImagesTxt", "BN_Image_Test.txt")
+
+# text_file_path = script_directory + '../ImagesTxt/BN_Image_Test.txt'
 
 with open(text_file_path, 'w') as file:
     for binary_pixel in binary_pixels:
