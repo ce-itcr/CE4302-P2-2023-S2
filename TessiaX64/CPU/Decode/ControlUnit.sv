@@ -2,11 +2,17 @@ module ControlUnit #(parameter WIDTH=8)(
     input logic clk, reset,
     input logic [1:0] Op,
     input logic [5:0] Funct,
-    input logic [3:0] Rd,
-    output logic PCSrcD, RegWriteD,
-    MemToRegD, MemWriteD, BranchD, ALUSrcD, NoWrite,
+    input logic [4:0] Rd,
+    output logic PCSrcD,
+	output logic RegWriteD,
+    output logic MemToRegD, 
+	output logic MemWriteD, 
+	output logic BranchD, 
+	output logic ALUSrcD, 
+	output logic NoWrite,
+	output logic ImmSrcD,
     output logic [3:0] ALUControlD,
-    output logic [1:0] ImmSrcD, RegSrcD
+    output logic [1:0] RegSrcD
 );
 	logic [9:0] controls;
 	logic Branch, ALUOp;
@@ -35,8 +41,7 @@ module ControlUnit #(parameter WIDTH=8)(
                 controls = 10'b0000000000;
 		endcase
 		
-	assign {RegSrcD, ImmSrcD, ALUSrcD, MemToRegD,
-	RegWriteD, MemWriteD, BranchD, ALUOp} = controls;
+	assign {RegSrcD, ImmSrcD, ALUSrcD, MemToRegD, RegWriteD, MemWriteD, BranchD, ALUOp} = controls;
 
 
 	// ALU Decoder ***********************************************************************************
@@ -61,6 +66,6 @@ module ControlUnit #(parameter WIDTH=8)(
 		end
 		
 		// PC Logic *****************************************************************
-		assign PCSrcD = ((Rd == 4'b1111) & RegWriteD) | BranchD;
+		assign PCSrcD = ((Rd == 5'b11111) & RegWriteD) | BranchD;
 
 endmodule
