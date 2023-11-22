@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at TessiaX64.sv(11): object "Rd1" differs only in case from object "RD1" in the same scope File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 11
+Info (10281): Verilog HDL Declaration information at TessiaX64.sv(12): object "Rd2" differs only in case from object "RD2" in the same scope File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 12
+Warning (10273): Verilog HDL warning at ControlUnit.sv(57): extended using "x" or "z" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 57
+Warning (10268): Verilog HDL information at TessiaX64_tb.sv(40): always construct contains both blocking and non-blocking assignments File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv Line: 40

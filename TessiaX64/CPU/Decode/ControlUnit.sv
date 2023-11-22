@@ -1,4 +1,4 @@
-module ControlUnit #(parameter WIDTH=8)(
+module ControlUnit(
     input logic clk, reset,
     input logic [1:0] Op,
     input logic [5:0] Funct,
@@ -10,11 +10,11 @@ module ControlUnit #(parameter WIDTH=8)(
 	output logic BranchD, 
 	output logic ALUSrcD, 
 	output logic NoWrite,
-	output logic ImmSrcD,
+	output logic [1:0] ImmSrcD,
     output logic [3:0] ALUControlD,
     output logic [1:0] RegSrcD
 );
-	logic [9:0] controls;
+	logic [8:0] controls;
 	logic Branch, ALUOp;
 	
 	// Main Decoder *******************************************************************************
@@ -32,11 +32,12 @@ module ControlUnit #(parameter WIDTH=8)(
                 // STR
                 else controls = 10'b1001110100;
             
+            
             2'b10: 
                 // B
                 controls = 10'b0110100010;
 
-            // Comming Soon Vector Processing
+            // 
             2'b11:
                 controls = 10'b0000000000;
 		endcase

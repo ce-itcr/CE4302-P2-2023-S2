@@ -1,0 +1,54 @@
+module TessiaX64_tb();
+    logic clk;
+	logic reset;
+    logic [4:0] RegisterToWrite;
+    logic [64:0] DataToWriteIntoRegister;
+    logic [64:0] AddressToWriteIntoMemory;
+    logic [64:0] DataToWriteIntoMemory;
+    logic EnableRegisterWrite;
+    logic EnableMemoryWrite;
+	
+	// instantiate device to be tested
+	TessiaX64 DUT
+	(
+		.clk(clk), 
+		.reset(reset),
+		.DataToWriteIntoMemory(DataToWriteIntoMemory),
+		.RegisterToWrite(RegisterToWrite),
+		.DataToWriteIntoRegister(DataToWriteIntoRegister),
+		.EnableRegisterWrite(EnableRegisterWrite),
+		.EnbaleMemoryWrite(EnableRegisterWrite),
+		.AddressToWriteIntoMemory(AddressToWriteIntoMemory)
+	);
+
+	// initialize test
+	initial
+	begin
+		reset <= 1; # 100; reset <= 0;
+	end
+
+	integer clk_count = 0;
+	always begin
+		if (clk_count < 400) begin
+			clk <= 1; #5;
+			clk <= 0; #5;
+			clk_count = clk_count + 1;
+		end else begin
+			#1; // Wait for any remaining logic to settle before stopping the clock
+			$stop;
+		end
+	end
+
+	// Display the key signals
+	always @(EnableRegisterWrite, EnableMemoryWrite)
+	begin
+		// TessiaX32 will write a new value to a Register
+		if (EnableRegisterWrite) begin
+			$display("R%d = %d\n", RegisterToWrite, DataToWriteIntoMemory);
+		end
+		// TessiaX32 will write a new value to memory
+		else if (EnableMemoryWrite) begin
+			$display("RAM[%d] = %d\n", AddressToWriteIntoMemory, DataToWriteIntoMemory);
+		end
+	end
+endmodule

@@ -4,8 +4,8 @@ module Execute #(parameter WIDTH= 8)(
     input logic [WIDTH-1:0] SrcAE, WriteDataE, ExtImmE,
     output logic [WIDTH-1:0] ALUResultE,
     output logic [3:0] ALUFlags,
+    output logic [WIDTH-1:0] SrcBE
 );
-    logic [WIDTH-1:0] SrcBE
 
     // Src BE Multiplexer
     mux2to1 #(WIDTH) srcbmux(.d0(WriteDataE), .d1(ExtImmE),

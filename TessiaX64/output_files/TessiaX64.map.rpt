@@ -1,0 +1,555 @@
+Analysis & Elaboration report for TessiaX64
+Wed Nov 22 01:31:51 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: InstructionMemory:imem
+  5. Parameter Settings for User Entity Instance: Fetch:FetchStage
+  6. Parameter Settings for User Entity Instance: Fetch:FetchStage|mux2to1:prepcmux
+  7. Parameter Settings for User Entity Instance: Fetch:FetchStage|mux2to1:pcmux
+  8. Parameter Settings for User Entity Instance: Fetch:FetchStage|flopenrc:pcregister
+  9. Parameter Settings for User Entity Instance: Fetch:FetchStage|adder:pcadd1
+ 10. Parameter Settings for User Entity Instance: flopenrc:FetchDecodeFlipFlop
+ 11. Parameter Settings for User Entity Instance: Decode:DecodeStage
+ 12. Parameter Settings for User Entity Instance: Decode:DecodeStage|mux2to1:ra1mux
+ 13. Parameter Settings for User Entity Instance: Decode:DecodeStage|mux2to1:ra2mux
+ 14. Parameter Settings for User Entity Instance: Decode:DecodeStage|RegisterFile:RF
+ 15. Parameter Settings for User Entity Instance: flopenrc:DecodeExecuteFlipFlop
+ 16. Parameter Settings for User Entity Instance: mux3to1:forwmulA
+ 17. Parameter Settings for User Entity Instance: mux3to1:forwmulB
+ 18. Parameter Settings for User Entity Instance: Execute:ExecuteStage
+ 19. Parameter Settings for User Entity Instance: Execute:ExecuteStage|mux2to1:srcbmux
+ 20. Parameter Settings for User Entity Instance: Execute:ExecuteStage|ALU:alu
+ 21. Parameter Settings for User Entity Instance: flopenrc:ExecuteMemoryFlipFlop
+ 22. Parameter Settings for User Entity Instance: DataMemory:dmem
+ 23. Parameter Settings for User Entity Instance: flopenrc:MemoryWriteBackFlipFlop
+ 24. Parameter Settings for User Entity Instance: WriteBack:writeback
+ 25. Parameter Settings for User Entity Instance: WriteBack:writeback|mux2to1:memtoregmux
+ 26. Analysis & Elaboration Settings
+ 27. Port Connectivity Checks: "flopenrc:MemoryWriteBackFlipFlop"
+ 28. Port Connectivity Checks: "flopenrc:ExecuteMemoryFlipFlop"
+ 29. Port Connectivity Checks: "flopenrc:DecodeExecuteFlipFlop"
+ 30. Port Connectivity Checks: "Decode:DecodeStage|mux2to1:ra1mux"
+ 31. Port Connectivity Checks: "Fetch:FetchStage|adder:pcadd1"
+ 32. Analysis & Elaboration Messages
+ 33. Analysis & Elaboration Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                   ;
++------------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status      ; Successful - Wed Nov 22 01:31:51 2023       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; TessiaX64                                   ;
+; Top-level Entity Name              ; TessiaX64                                   ;
+; Family                             ; Cyclone IV GX                               ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InstructionMemory:imem ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Fetch:FetchStage ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Fetch:FetchStage|mux2to1:prepcmux ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Fetch:FetchStage|mux2to1:pcmux ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Fetch:FetchStage|flopenrc:pcregister ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Fetch:FetchStage|adder:pcadd1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopenrc:FetchDecodeFlipFlop ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decode:DecodeStage ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decode:DecodeStage|mux2to1:ra1mux ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 5     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decode:DecodeStage|mux2to1:ra2mux ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 5     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decode:DecodeStage|RegisterFile:RF ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopenrc:DecodeExecuteFlipFlop ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 226   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux3to1:forwmulA ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux3to1:forwmulB ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:ExecuteStage ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:ExecuteStage|mux2to1:srcbmux ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:ExecuteStage|ALU:alu ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 64    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopenrc:ExecuteMemoryFlipFlop ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 137   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DataMemory:dmem ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopenrc:MemoryWriteBackFlipFlop ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 136   ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WriteBack:writeback ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WriteBack:writeback|mux2to1:memtoregmux ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 64    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                            ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CGX150DF31I7AD  ;                    ;
+; Top-level entity name                                            ; TessiaX64          ; TessiaX64          ;
+; Family name                                                      ; Cyclone IV GX      ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "flopenrc:MemoryWriteBackFlipFlop" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "flopenrc:ExecuteMemoryFlipFlop" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "flopenrc:DecodeExecuteFlipFlop" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Decode:DecodeStage|mux2to1:ra1mux" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; d1   ; Input ; Info     ; Stuck at VCC                        ;
++------+-------+----------+-------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Fetch:FetchStage|adder:pcadd1" ;
++----------+-------+----------+-----------------------------+
+; Port     ; Type  ; Severity ; Details                     ;
++----------+-------+----------+-----------------------------+
+; b[63..3] ; Input ; Info     ; Stuck at GND                ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                ;
++----------+-------+----------+-----------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Nov 22 01:31:41 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TessiaX64 -c TessiaX64 --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/utils/adder.sv
+    Info (12023): Found entity 1: adder File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/utils/flopenr.sv
+    Info (12023): Found entity 1: flopenr File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/flopenr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/utils/flopenrc.sv
+    Info (12023): Found entity 1: flopenrc File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/flopenrc.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/utils/flopr.sv
+    Info (12023): Found entity 1: flopr File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/flopr.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/utils/mux2to1.sv
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux2to1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/utils/mux3to1.sv
+    Info (12023): Found entity 1: mux3to1 File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux3to1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/fetch/fetch.sv
+    Info (12023): Found entity 1: Fetch File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/decode/registerfile.sv
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/RegisterFile.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/decode/extendimmediate.sv
+    Info (12023): Found entity 1: ExtendImmediate File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ExtendImmediate.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/tessiax64.sv
+    Info (12023): Found entity 1: TessiaX64 File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/memory/instructionmemory.sv
+    Info (12023): Found entity 1: InstructionMemory File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/decode/controlunit.sv
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/decode/decode.sv
+    Info (12023): Found entity 1: Decode File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/execute/alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/execute/conditionalunit.sv
+    Info (12023): Found entity 1: ConditionalUnit File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionalUnit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/execute/conditioncheck.sv
+    Info (12023): Found entity 1: ConditionCheck File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionCheck.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/execute/execute.sv
+    Info (12023): Found entity 1: Execute File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/hazards/hazardunit.sv
+    Info (12023): Found entity 1: HazardUnit File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards/HazardUnit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/memory/datamemory.sv
+    Info (12023): Found entity 1: DataMemory File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/writeback/writeback.sv
+    Info (12023): Found entity 1: WriteBack File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbenches/tessiax64_tb.sv
+    Info (12023): Found entity 1: TessiaX64_tb File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv Line: 1
+Info (12127): Elaborating entity "TessiaX64" for the top level hierarchy
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:imem" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 67
+Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv Line: 8
+Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv Line: 8
+Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv Line: 8
+Info (12128): Elaborating entity "Fetch" for hierarchy "Fetch:FetchStage" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 80
+Info (12128): Elaborating entity "mux2to1" for hierarchy "Fetch:FetchStage|mux2to1:prepcmux" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv Line: 11
+Info (12128): Elaborating entity "flopenrc" for hierarchy "Fetch:FetchStage|flopenrc:pcregister" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv Line: 22
+Info (12128): Elaborating entity "adder" for hierarchy "Fetch:FetchStage|adder:pcadd1" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv Line: 25
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:controlunit" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 108
+Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(25): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(27): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(31): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(33): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(37): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(41): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 41
+Info (12128): Elaborating entity "Decode" for hierarchy "Decode:DecodeStage" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 125
+Info (12128): Elaborating entity "mux2to1" for hierarchy "Decode:DecodeStage|mux2to1:ra1mux" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 13
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "Decode:DecodeStage|RegisterFile:RF" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 23
+Info (12128): Elaborating entity "ExtendImmediate" for hierarchy "Decode:DecodeStage|ExtendImmediate:EI" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 27
+Info (12128): Elaborating entity "flopenrc" for hierarchy "flopenrc:DecodeExecuteFlipFlop" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 167
+Info (12128): Elaborating entity "ConditionalUnit" for hierarchy "ConditionalUnit:CondUnit" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 183
+Info (12128): Elaborating entity "ConditionCheck" for hierarchy "ConditionalUnit:CondUnit|ConditionCheck:cc" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionalUnit.sv Line: 12
+Warning (10036): Verilog HDL or VHDL warning at ConditionCheck.sv(6): object "carry" assigned a value but never read File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionCheck.sv Line: 6
+Info (12128): Elaborating entity "mux3to1" for hierarchy "mux3to1:forwmulA" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 192
+Info (12128): Elaborating entity "HazardUnit" for hierarchy "HazardUnit:hazards" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 223
+Info (12128): Elaborating entity "Execute" for hierarchy "Execute:ExecuteStage" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 235
+Info (12128): Elaborating entity "ALU" for hierarchy "Execute:ExecuteStage|ALU:alu" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv Line: 19
+Info (12128): Elaborating entity "flopenrc" for hierarchy "flopenrc:ExecuteMemoryFlipFlop" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 258
+Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:dmem" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 267
+Warning (10175): Verilog HDL warning at DataMemory.sv(14): ignoring unsupported system task File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv Line: 14
+Info (12128): Elaborating entity "flopenrc" for hierarchy "flopenrc:MemoryWriteBackFlipFlop" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 289
+Info (12128): Elaborating entity "WriteBack" for hierarchy "WriteBack:writeback" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 297
+Info (144001): Generated suppressed messages file C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/output_files/TessiaX64.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Wed Nov 22 01:31:51 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:07
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/output_files/TessiaX64.map.smsg.
+
+

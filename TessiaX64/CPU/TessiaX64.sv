@@ -1,17 +1,26 @@
 module TessiaX64(
     input logic clk, reset,
-    output logic [31:0] DataToWriteIntoMemory,
-    output logic [3:0] RegisterToWrite,
-    output logic [31:0] DataToWriteIntoRegister,
-    output logic [31:0] AddressToWriteIntoMemory,
+    output logic [4:0] RegisterToWrite,
+    output logic [63:0] DataToWriteIntoRegister,
+    output logic [63:0] AddressToWriteIntoMemory,
+    output logic [63:0] DataToWriteIntoMemory,
     output logic EnableRegisterWrite,
-    output logic EnbaleMemoryWrite
+    output logic EnableMemoryWrite,
+    output logic [63:0] Instruction,
+    output logic [4:0] A1, A2,
+    output logic [63:0] Rd1, Rd2,
+    output logic [63:0] SrcA, SrcB,
+    output logic [63:0] ALUResult,
+    output logic [3:0] Operation,
+    output logic [63:0] ReadData,
+    output logic MemToReg,
+    output logic RegWriteM1
 );
 
-    logic [63:0] InstructionF, InstructionD, ReadData;
+    logic [63:0] InstructionF, InstructionD;
     logic [63:0] ResultW;
     logic PCSrcW;
-    logic [63:0] PCPlus8;
+    logic [63:0] PCPlus4;
     logic [3:0] ALUFlags;
     logic [63:0] PCF;
     logic RegWriteW;
@@ -21,11 +30,11 @@ module TessiaX64(
     logic PCSrcD, RegWriteD, MemToRegD, MemWriteD;
     logic BranchD, ALUSrcD, NoWriteD;
     logic [3:0] ALUControlD;
-    logic ImmSrcD;
+    logic [1:0] ImmSrcD;
     logic [3:0] Flags;
     logic PCSrcE, RegWriteE, MemToRegE, MemWriteE;
     logic BranchE, ALUSrcE, NoWriteE;
-    logic [3:0] ALUControlE, 
+    logic [3:0] ALUControlE;
     logic [4:0] WA3E;
     logic [3:0] FlagsE, CondE;
     logic [63:0] RD1E, RD2E;
@@ -35,30 +44,44 @@ module TessiaX64(
     logic PCSrcM, RegWriteM, MemWriteM, MemToRegM;
     logic [63:0] ALUOutM, WriteDataM, ReadDataM;
     logic [63:0] ALUResultE;
-    logic [3:0] WA3M;
+    logic [4:0] WA3M;
+
+    logic MemToRegW;
+    logic [63:0] ReadDataW, ALUOutW;
+    logic [1:0] ForwardAE, ForwardBE;
+    logic StallF, StallD, FlushD, FlushE;
+    logic BranchTakenE;
 
     // Assigments for the TessiaX32 outputs *********************************************
     assign DataToWriteIntoMemory = WriteDataM;
     assign RegisterToWrite = WA3W;
     assign EnableRegisterWrite = RegWriteW;
-    assign EnbaleMemoryWrite = MemWriteM;
+    assign EnableMemoryWrite = MemWriteM;
     assign DataToWriteIntoRegister = ResultW;
     assign AddressToWriteIntoMemory = ALUOutM;
+    assign Instruction = InstructionF;
+    assign A1 = RA1D;
+    assign A2 = RA2D;
+    assign Rd1 = RD1;
+    assign Rd2 = RD2;
+    assign ALUResult = ALUResultE;
+    assign SrcA = SrcAE;
+    assign Operation = ALUControlE;
+    assign ReadData = ReadDataW;
+    assign MemToReg = MemToRegW;
+    assign RegWriteM1 = RegWriteM;
     // Assigments for the TessiaX32 outputs *********************************************
 
-    logic MemToRegW;
-    logic [31:0] ReadDataW, ALUOutW;
-    logic [1:0] ForwardAE, ForwardBE;
-    logic StallF, StallD, FlushD, FlushE;
-    logic BranchTakenE;
+
 
     //***************************** FETCH STAGE ***********************************
-    InstructionMemory imem(
+    InstructionMemory #(64) imem(
         .a(PCF), 
         .rd(InstructionF)
     );
 
-    Fetch #(32) FetchStage(
+    // Pipeline Fetch Stage
+    Fetch #(64) FetchStage(
         .clk(clk), 
         .reset(reset),
         .PCSrcW(PCSrcW),
@@ -66,11 +89,11 @@ module TessiaX64(
         .ResultW(ResultW),
         .ALUResultE(ALUResultE),
         .PCF(PCF), 
-        .PCPlus8F(PCPlus8),
+        .PCPlus4F(PCPlus4),
         .BranchTakenE(BranchTakenE)
     );
 
-    flopenrc #(32) FetchDecodeFlipFlop(
+    flopenrc #(64) FetchDecodeFlipFlop(
         .clk(clk), 
         .reset(FlushD), 
         .en(!StallD), 
@@ -79,34 +102,36 @@ module TessiaX64(
     );
 
     //***************************** DECODE STAGE ***********************************
-    ControlUnit #(32) controlunit(
-        .clk(clk), 
-        .reset(reset), 
+    ControlUnit controlunit(
+        .clk(clk),
+        .reset(reset),
         .Op(InstructionD[59:58]),
         .Funct(InstructionD[57:52]),
-        .Rd(InstructionD[46:42]),
+        .Rd(InstructionD[46:42]), 
         .PCSrcD(PCSrcD), 
-        .RegWriteD(RegWriteD),
-        .MemToRegD(MemToRegD), 
+
+        .RegWriteD(RegWriteD), 
+        .MemToRegD(MemToRegD),  
         .MemWriteD(MemWriteD), 
         .BranchD(BranchD), 
         .ALUSrcD(ALUSrcD), 
-        .NoWrite(NoWriteD),
-        .ALUControlD(ALUControlD),
+        .NoWrite(NoWriteD), 
+        .ALUControlD(ALUControlD), 
         .ImmSrcD(ImmSrcD), 
-        .RegSrcD(RegSrcD)
+        .RegSrcD(RegSrcD) 
     );
 
-    Decode #(32) DecodeStage(
+    Decode #(64) DecodeStage(
         .clk(clk), 
         .reset(reset), 
         .RegWriteW(RegWriteW),
+        .MemToRegW(MemToRegW),
         .RegSrcD(RegSrcD), 
         .ImmSrcD(ImmSrcD),
         .WA3W(WA3W), 
         .InstructionD(InstructionD), 
         .ResultW(ResultW), 
-        .PCPlus16D(PCPlus8),
+        .PCPlus8D(PCPlus4),
         .RD1(RD1), 
         .RD2(RD2), 
         .ExtImmD(ExtImmD),
@@ -115,7 +140,7 @@ module TessiaX64(
     );
 
     // Decode - Execute Flip Flop
-    flopenrc #(127) DecodeExecuteFlipFlop(
+    flopenrc #(226) DecodeExecuteFlipFlop(
         .clk(clk), 
         .reset(FlushE), 
         .en(1'b1), 
@@ -218,13 +243,14 @@ module TessiaX64(
         .ALUSrcE(ALUSrcE),
         .ALUControlE(ALUControlE),
         .SrcAE(SrcAE),
+        .SrcBE(SrcB),
         .WriteDataE(WriteDataE), 
         .ExtImmE(ExtImmE),
         .ALUResultE(ALUResultE),
         .ALUFlags(ALUFlags)
     );
 
-    flopenrc #(72) ExecuteMemoryFlipFlop(
+    flopenrc #(137) ExecuteMemoryFlipFlop(
         .clk(clk), 
         .reset(reset), 
         .en(1'b1), 
@@ -256,7 +282,7 @@ module TessiaX64(
         .rd(ReadDataM)
     );
 
-    flopenrc #(71) MemoryWriteBackFlipFlop(
+    flopenrc #(136) MemoryWriteBackFlipFlop(
         .clk(clk), 
         .reset(reset), 
         .en(1'b1), 
@@ -279,7 +305,7 @@ module TessiaX64(
     );
 
     //***************************** WRITE BACK STAGE ***********************************
-    WriteBack #(32) writeback(
+    WriteBack #(64) writeback(
         .MemToRegW(MemToRegW),
         .ReadDataW(ReadDataW), 
         .ALUOutW(ALUOutW),

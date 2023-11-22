@@ -1,0 +1,500 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/simulation/modelsim
+vadder
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1700652530
+!i10b 1
+!s100 o4;LCWk3zROaid=4[Yfh@2
+IQlAMLnimijG@49jN^=1Uf1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder_sv_unit
+S1
+R0
+w1700606004
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/adder.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/adder.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1700652530.000000
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/adder.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils
+Z8 tCvgOpt 0
+vALU
+R1
+Z9 !s110 1700652531
+!i10b 1
+!s100 fd=XO45i4PD1hGE29SAlK2
+IbG=3Yj<L1L<fB5ZYcNnRJ0
+R3
+!s105 ALU_sv_unit
+S1
+R0
+w1700609541
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ALU.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ALU.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z10 !s108 1700652531.000000
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ALU.sv|
+!i113 1
+R6
+Z11 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute
+R8
+n@a@l@u
+vConditionalUnit
+R1
+R9
+!i10b 1
+!s100 N]0@;H8HDIfVdc7<`4?T11
+IBViGz8ToE44V>32l1Ee;[2
+R3
+!s105 ConditionalUnit_sv_unit
+S1
+R0
+w1700651045
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionalUnit.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionalUnit.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionalUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionalUnit.sv|
+!i113 1
+R6
+R11
+R8
+n@conditional@unit
+vConditionCheck
+R1
+Z12 !s110 1700652532
+!i10b 1
+!s100 NG;SEaI`9c=_hS[`XLA5d1
+IF=cVZ?Fl^V>?;EOAZH4QC0
+R3
+!s105 ConditionCheck_sv_unit
+S1
+R0
+w1700609749
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionCheck.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionCheck.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z13 !s108 1700652532.000000
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionCheck.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionCheck.sv|
+!i113 1
+R6
+R11
+R8
+n@condition@check
+vControlUnit
+R1
+R9
+!i10b 1
+!s100 dbjJK=H50_QBF;QlahDVR2
+InYA;nz4JZN:;[86H4iO`:3
+R3
+!s105 ControlUnit_sv_unit
+S1
+R0
+w1700651250
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv|
+!i113 1
+R6
+Z14 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode
+R8
+n@control@unit
+vDataMemory
+R1
+R12
+!i10b 1
+!s100 7^0P=`2fEc3TeMh[8lHWf1
+ISLAGSdi6Q0eJ[_o1EYkFj1
+R3
+!s105 DataMemory_sv_unit
+S1
+R0
+w1700628173
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv|
+!i113 1
+R6
+Z15 !s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory
+R8
+n@data@memory
+vDecode
+R1
+R9
+!i10b 1
+!s100 LNCncBjLCUIoYnKcXD0W:2
+I?HdJo_]BXOG60@fXSbEJ=0
+R3
+!s105 Decode_sv_unit
+S1
+R0
+w1700652240
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv|
+!i113 1
+R6
+R14
+R8
+n@decode
+vExecute
+R1
+R12
+!i10b 1
+!s100 50cHYfaVaiQ9:295;UKHU0
+IOXTVRBEhccIEKTV:oU=OQ0
+R3
+!s105 Execute_sv_unit
+S1
+R0
+w1700639847
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv|
+!i113 1
+R6
+R11
+R8
+n@execute
+vExtendImmediate
+R1
+R9
+!i10b 1
+!s100 eF:^8lKUCk:4W_O`O^@WS2
+IHdH4Uzc:ed7?iI?GFG_]K0
+R3
+!s105 ExtendImmediate_sv_unit
+S1
+R0
+w1700631147
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ExtendImmediate.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ExtendImmediate.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ExtendImmediate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ExtendImmediate.sv|
+!i113 1
+R6
+R14
+R8
+n@extend@immediate
+vFetch
+R1
+R9
+!i10b 1
+!s100 nNUVI3Tb>jbGM<Laij=C=3
+I96`Ll@W:]`^4NNBKFCZ;H0
+R3
+!s105 Fetch_sv_unit
+S1
+R0
+w1700631503
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv|
+!i113 1
+R6
+!s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch
+R8
+n@fetch
+vflopenrc
+R1
+R2
+!i10b 1
+!s100 jKjJX[e]=AI90D[2]EDE@1
+IOY^16Y9]=G=lz@=JZR]JA1
+R3
+!s105 flopenrc_sv_unit
+S1
+R0
+w1700606071
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/flopenrc.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/flopenrc.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/flopenrc.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/flopenrc.sv|
+!i113 1
+R6
+R7
+R8
+vHazardUnit
+R1
+R12
+!i10b 1
+!s100 :`]IR0XXIdE<^ONdN[lJ>2
+IXdHIIeoz>10<G@Vz]4LiL2
+R3
+!s105 HazardUnit_sv_unit
+S1
+R0
+w1700610624
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards/HazardUnit.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards/HazardUnit.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards/HazardUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards/HazardUnit.sv|
+!i113 1
+R6
+!s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards
+R8
+n@hazard@unit
+vInstructionMemory
+R1
+R9
+!i10b 1
+!s100 50>oc2E1F8dCS:<D;;QCl2
+I8cm]1;9d@c[lCCS6ElVU10
+R3
+!s105 InstructionMemory_sv_unit
+S1
+R0
+w1700647252
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv|
+!i113 1
+R6
+R15
+R8
+n@instruction@memory
+vmux2to1
+R1
+R2
+!i10b 1
+!s100 7Y<OMPG9e_SnNW3Rf3Xo;2
+IWdJnTj:<RGo@ViHTc>Z^21
+R3
+!s105 mux2to1_sv_unit
+S1
+R0
+w1700606131
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux2to1.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux2to1.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux2to1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux2to1.sv|
+!i113 1
+R6
+R7
+R8
+vmux3to1
+R1
+R9
+!i10b 1
+!s100 ;O7>hAa>QT=0j0@L_HbL?3
+I492cE8gXHD_c[>SC_^j9l2
+R3
+!s105 mux3to1_sv_unit
+S1
+R0
+w1700606155
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux3to1.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux3to1.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux3to1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux3to1.sv|
+!i113 1
+R6
+R7
+R8
+vRegisterFile
+R1
+R9
+!i10b 1
+!s100 _?h?7BZG7VMNPWU4[^Dg91
+Ill79^`]RXLNzVfK954noW1
+R3
+!s105 RegisterFile_sv_unit
+S1
+R0
+w1700652175
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/RegisterFile.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/RegisterFile.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/RegisterFile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/RegisterFile.sv|
+!i113 1
+R6
+R14
+R8
+n@register@file
+vTessiaX64
+R1
+R9
+!i10b 1
+!s100 A5MjonYT?SD`RSg4d1LK@3
+IU>`[mL`Zjl2W>VjVj[Jh=0
+R3
+!s105 TessiaX64_sv_unit
+S1
+R0
+w1700652274
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv|
+!i113 1
+R6
+!s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU
+R8
+n@tessia@x64
+vTessiaX64_tb
+R1
+R12
+!i10b 1
+!s100 66I]Z1;KokHz7HjfeEKXF0
+I<Lz@z3UL=`mV[Z3^UV;LU3
+R3
+!s105 TessiaX64_tb_sv_unit
+S1
+R0
+w1700652515
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv|
+!i113 1
+R6
+!s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches
+R8
+n@tessia@x64_tb
+vWriteBack
+R1
+R12
+!i10b 1
+!s100 <h>Sde?OX7lCT6:SQ_aaN2
+I003A:DJ6;6^QK1HJKmdRg2
+R3
+!s105 WriteBack_sv_unit
+S1
+R0
+w1700628050
+8C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv
+FC:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack|C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv|
+!i113 1
+R6
+!s92 -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack
+R8
+n@write@back

@@ -2,12 +2,12 @@ module Fetch #(parameter WIDTH= 8)(
     input logic clk, reset, PCSrcW, enablePCFlipFlop,
     input logic BranchTakenE,
     input logic [WIDTH-1:0] ResultW, ALUResultE,
-    output logic [WIDTH-1:0] PCF, PCPlus8F
+    output logic [WIDTH-1:0] PCF, PCPlus4F
 );
     logic [WIDTH-1:0] PrePCNext, PCNext;
 
     // Pre Next PC Multiplexer
-    mux2to1 #(WIDTH) prepcmux(.d0(PCPlus8F), .d1(ResultW),
+    mux2to1 #(WIDTH) prepcmux(.d0(PCPlus4F), .d1(ResultW),
                          .selection(PCSrcW), .result(PrePCNext));
 
     // Next PC Multiplexer
@@ -22,6 +22,6 @@ module Fetch #(parameter WIDTH= 8)(
         .q(PCF));
 
     // (PC + 8) Adder
-    adder #(WIDTH) pcadd1(.a(PCF), .b(8), .result(PCPlus8F));
+    adder #(WIDTH) pcadd1(.a(PCF), .b(64'd4), .result(PCPlus4F));
 
 endmodule

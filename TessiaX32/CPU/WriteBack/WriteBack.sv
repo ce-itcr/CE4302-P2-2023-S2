@@ -5,7 +5,7 @@ module WriteBack #(parameter WIDTH=8)(
 );
 
     // Mux Mem To Reg
-    mux2to1 #(32) memtoregmux(.d0(ALUOutW), .d1(ReadDataW),
+    mux2to1 #(64) memtoregmux(.d0(ALUOutW), .d1(ReadDataW),
                          .selection(MemToRegW), 
                          .result(ResultW));
 
