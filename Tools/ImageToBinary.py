@@ -17,7 +17,7 @@ def image_to_binary(image_path):
         img_gray = img.convert("L")
         img_array = np.array(img_gray)
         flat_array = img_array.flatten()
-        binary_pixels = [format(pixel, '08b') for pixel in flat_array]
+        binary_pixels = [format(pixel, '064b') for pixel in flat_array]
 
         return binary_pixels
 
