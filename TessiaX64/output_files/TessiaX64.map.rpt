@@ -1,5 +1,5 @@
 Analysis & Elaboration report for TessiaX64
-Wed Nov 22 01:31:51 2023
+Wed Nov 22 07:56:22 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -20,25 +20,34 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  12. Parameter Settings for User Entity Instance: Decode:DecodeStage|mux2to1:ra1mux
  13. Parameter Settings for User Entity Instance: Decode:DecodeStage|mux2to1:ra2mux
  14. Parameter Settings for User Entity Instance: Decode:DecodeStage|RegisterFile:RF
- 15. Parameter Settings for User Entity Instance: flopenrc:DecodeExecuteFlipFlop
- 16. Parameter Settings for User Entity Instance: mux3to1:forwmulA
- 17. Parameter Settings for User Entity Instance: mux3to1:forwmulB
- 18. Parameter Settings for User Entity Instance: Execute:ExecuteStage
- 19. Parameter Settings for User Entity Instance: Execute:ExecuteStage|mux2to1:srcbmux
- 20. Parameter Settings for User Entity Instance: Execute:ExecuteStage|ALU:alu
- 21. Parameter Settings for User Entity Instance: flopenrc:ExecuteMemoryFlipFlop
- 22. Parameter Settings for User Entity Instance: DataMemory:dmem
- 23. Parameter Settings for User Entity Instance: flopenrc:MemoryWriteBackFlipFlop
- 24. Parameter Settings for User Entity Instance: WriteBack:writeback
- 25. Parameter Settings for User Entity Instance: WriteBack:writeback|mux2to1:memtoregmux
- 26. Analysis & Elaboration Settings
- 27. Port Connectivity Checks: "flopenrc:MemoryWriteBackFlipFlop"
- 28. Port Connectivity Checks: "flopenrc:ExecuteMemoryFlipFlop"
- 29. Port Connectivity Checks: "flopenrc:DecodeExecuteFlipFlop"
- 30. Port Connectivity Checks: "Decode:DecodeStage|mux2to1:ra1mux"
- 31. Port Connectivity Checks: "Fetch:FetchStage|adder:pcadd1"
- 32. Analysis & Elaboration Messages
- 33. Analysis & Elaboration Suppressed Messages
+ 15. Parameter Settings for User Entity Instance: Decode:DecodeStage|VectorRegisterFile:VRF
+ 16. Parameter Settings for User Entity Instance: flopenrc:DecodeExecuteFlipFlop
+ 17. Parameter Settings for User Entity Instance: mux3to1:forwmulA
+ 18. Parameter Settings for User Entity Instance: mux3to1:forwmulB
+ 19. Parameter Settings for User Entity Instance: Execute:ExecuteStage
+ 20. Parameter Settings for User Entity Instance: Execute:ExecuteStage|mux2to1:srcbmux
+ 21. Parameter Settings for User Entity Instance: Execute:ExecuteStage|ALU:alu
+ 22. Parameter Settings for User Entity Instance: Execute:ExecuteStage|VectorALU:aluv
+ 23. Parameter Settings for User Entity Instance: flopenrc:ExecuteMemoryFlipFlop
+ 24. Parameter Settings for User Entity Instance: DataMemory:dmem
+ 25. Parameter Settings for User Entity Instance: flopenrc:MemoryWriteBackFlipFlop
+ 26. Parameter Settings for User Entity Instance: WriteBack:writeback
+ 27. Parameter Settings for User Entity Instance: WriteBack:writeback|mux2to1:memtoregmux
+ 28. Analysis & Elaboration Settings
+ 29. Port Connectivity Checks: "WriteBack:writeback|vectormux2to1:Vmemtoregmux"
+ 30. Port Connectivity Checks: "WriteBack:writeback"
+ 31. Port Connectivity Checks: "flopenrc:MemoryWriteBackFlipFlop"
+ 32. Port Connectivity Checks: "flopenrc:ExecuteMemoryFlipFlop"
+ 33. Port Connectivity Checks: "Execute:ExecuteStage|VectorALU:aluv"
+ 34. Port Connectivity Checks: "Execute:ExecuteStage"
+ 35. Port Connectivity Checks: "vectormux3to1:vforwmulB"
+ 36. Port Connectivity Checks: "vectormux3to1:vforwmulA"
+ 37. Port Connectivity Checks: "flopenrc:DecodeExecuteFlipFlop"
+ 38. Port Connectivity Checks: "Decode:DecodeStage|mux2to1:ra1mux"
+ 39. Port Connectivity Checks: "Decode:DecodeStage"
+ 40. Port Connectivity Checks: "Fetch:FetchStage|adder:pcadd1"
+ 41. Analysis & Elaboration Messages
+ 42. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -64,7 +73,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Nov 22 01:31:51 2023       ;
+; Analysis & Elaboration Status      ; Failed - Wed Nov 22 07:56:22 2023           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TessiaX64                                   ;
 ; Top-level Entity Name              ; TessiaX64                                   ;
@@ -211,12 +220,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decode:DecodeStage|VectorRegisterFile:VRF ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; REGSIZE        ; 15    ; Signed Integer                                                ;
+; VECTORSPERREG  ; 4     ; Signed Integer                                                ;
+; DATAWIDTH      ; 16    ; Signed Integer                                                ;
+; REGSIZEINT     ; 4     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: flopenrc:DecodeExecuteFlipFlop ;
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; WIDTH          ; 226   ; Signed Integer                                     ;
+; WIDTH          ; 356   ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -271,12 +293,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:ExecuteStage|VectorALU:aluv ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                          ;
+; REGSIZE        ; 15    ; Signed Integer                                          ;
+; VECTORSPERREG  ; 4     ; Signed Integer                                          ;
+; DATAWIDTH      ; 16    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: flopenrc:ExecuteMemoryFlipFlop ;
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; WIDTH          ; 137   ; Signed Integer                                     ;
+; WIDTH          ; 203   ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -296,7 +331,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                 ;
 +----------------+-------+------------------------------------------------------+
-; WIDTH          ; 136   ; Signed Integer                                       ;
+; WIDTH          ; 202   ; Signed Integer                                       ;
 +----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -407,13 +442,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------+
-; Port Connectivity Checks: "flopenrc:MemoryWriteBackFlipFlop" ;
-+------+-------+----------+------------------------------------+
-; Port ; Type  ; Severity ; Details                            ;
-+------+-------+----------+------------------------------------+
-; en   ; Input ; Info     ; Stuck at VCC                       ;
-+------+-------+----------+------------------------------------+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "WriteBack:writeback|vectormux2to1:Vmemtoregmux" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; d0   ; Input ; Info     ; Stuck at GND                                     ;
+; d1   ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "WriteBack:writeback"                                                                                                ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                  ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; VectorReadDataW ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; VectorALUOutW   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; VectorResultW   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flopenrc:MemoryWriteBackFlipFlop"                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; en       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q[63..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
@@ -423,6 +480,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------+
 ; en   ; Input ; Info     ; Stuck at VCC                     ;
 +------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Execute:ExecuteStage|VectorALU:aluv"                                                                                                        ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clk  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Execute:ExecuteStage"                                                                                                   ;
++------------------+--------+------------------+-----------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity         ; Details                                                                                             ;
++------------------+--------+------------------+-----------------------------------------------------------------------------------------------------+
+; VectorALUResultE ; Output ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Input" but port on entity declared as "Output" ;
++------------------+--------+------------------+-----------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "vectormux3to1:vforwmulB" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; d1   ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "vectormux3to1:vforwmulA" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; d1   ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
 
 
 +------------------------------------------------------------+
@@ -443,6 +536,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------+
 
 
++-------------------------------------------------+
+; Port Connectivity Checks: "Decode:DecodeStage"  ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; VectorResultW ; Input ; Info     ; Stuck at GND ;
++---------------+-------+----------+--------------+
+
+
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "Fetch:FetchStage|adder:pcadd1" ;
 +----------+-------+----------+-----------------------------+
@@ -460,7 +562,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 22 01:31:41 2023
+    Info: Processing started: Wed Nov 22 07:56:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TessiaX64 -c TessiaX64 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -506,45 +608,124 @@ Info (12021): Found 1 design units, including 1 entities, in source file cpu/wri
     Info (12023): Found entity 1: WriteBack File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbenches/tessiax64_tb.sv
     Info (12023): Found entity 1: TessiaX64_tb File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/decode/vectorregisterfile.sv
+    Info (12023): Found entity 1: VectorRegisterFile File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/VectorRegisterFile.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/utils/vectormux2to1.sv
+    Info (12023): Found entity 1: vectormux2to1 File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/vectormux2to1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/utils/vectormux3to1.sv
+    Info (12023): Found entity 1: vectormux3to1 File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/vectormux3to1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu/execute/vectoralu.sv
+    Info (12023): Found entity 1: VectorALU File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/VectorALU.sv Line: 1
 Info (12127): Elaborating entity "TessiaX64" for the top level hierarchy
-Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:imem" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 67
+Warning (10030): Net "VectorResultW" at TessiaX64.sv(63) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 63
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:imem" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 96
 Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv Line: 8
 Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv Line: 8
 Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv Line: 8
-Info (12128): Elaborating entity "Fetch" for hierarchy "Fetch:FetchStage" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 80
+Info (12128): Elaborating entity "Fetch" for hierarchy "Fetch:FetchStage" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 109
 Info (12128): Elaborating entity "mux2to1" for hierarchy "Fetch:FetchStage|mux2to1:prepcmux" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv Line: 11
 Info (12128): Elaborating entity "flopenrc" for hierarchy "Fetch:FetchStage|flopenrc:pcregister" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv Line: 22
 Info (12128): Elaborating entity "adder" for hierarchy "Fetch:FetchStage|adder:pcadd1" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv Line: 25
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:controlunit" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 108
-Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(25): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(27): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 27
-Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(31): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 31
-Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(33): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 33
-Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(37): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 37
-Warning (10230): Verilog HDL assignment warning at ControlUnit.sv(41): truncated value with size 10 to match size of target (9) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv Line: 41
-Info (12128): Elaborating entity "Decode" for hierarchy "Decode:DecodeStage" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 125
-Info (12128): Elaborating entity "mux2to1" for hierarchy "Decode:DecodeStage|mux2to1:ra1mux" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 13
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "Decode:DecodeStage|RegisterFile:RF" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 23
-Info (12128): Elaborating entity "ExtendImmediate" for hierarchy "Decode:DecodeStage|ExtendImmediate:EI" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 27
-Info (12128): Elaborating entity "flopenrc" for hierarchy "flopenrc:DecodeExecuteFlipFlop" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 167
-Info (12128): Elaborating entity "ConditionalUnit" for hierarchy "ConditionalUnit:CondUnit" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 183
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:controlunit" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 139
+Info (12128): Elaborating entity "Decode" for hierarchy "Decode:DecodeStage" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 161
+Info (12128): Elaborating entity "mux2to1" for hierarchy "Decode:DecodeStage|mux2to1:ra1mux" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 16
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "Decode:DecodeStage|RegisterFile:RF" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 26
+Info (12128): Elaborating entity "VectorRegisterFile" for hierarchy "Decode:DecodeStage|VectorRegisterFile:VRF" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 31
+Info (12128): Elaborating entity "ExtendImmediate" for hierarchy "Decode:DecodeStage|ExtendImmediate:EI" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv Line: 34
+Info (12128): Elaborating entity "flopenrc" for hierarchy "flopenrc:DecodeExecuteFlipFlop" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 211
+Info (12128): Elaborating entity "ConditionalUnit" for hierarchy "ConditionalUnit:CondUnit" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 227
 Info (12128): Elaborating entity "ConditionCheck" for hierarchy "ConditionalUnit:CondUnit|ConditionCheck:cc" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionalUnit.sv Line: 12
 Warning (10036): Verilog HDL or VHDL warning at ConditionCheck.sv(6): object "carry" assigned a value but never read File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionCheck.sv Line: 6
-Info (12128): Elaborating entity "mux3to1" for hierarchy "mux3to1:forwmulA" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 192
-Info (12128): Elaborating entity "HazardUnit" for hierarchy "HazardUnit:hazards" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 223
-Info (12128): Elaborating entity "Execute" for hierarchy "Execute:ExecuteStage" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 235
-Info (12128): Elaborating entity "ALU" for hierarchy "Execute:ExecuteStage|ALU:alu" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv Line: 19
-Info (12128): Elaborating entity "flopenrc" for hierarchy "flopenrc:ExecuteMemoryFlipFlop" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 258
-Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:dmem" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 267
+Info (12128): Elaborating entity "mux3to1" for hierarchy "mux3to1:forwmulA" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 236
+Info (12128): Elaborating entity "vectormux3to1" for hierarchy "vectormux3to1:vforwmulA" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 254
+Info (12128): Elaborating entity "HazardUnit" for hierarchy "HazardUnit:hazards" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 285
+Info (12128): Elaborating entity "Execute" for hierarchy "Execute:ExecuteStage" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Info (12128): Elaborating entity "ALU" for hierarchy "Execute:ExecuteStage|ALU:alu" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv Line: 21
+Info (12128): Elaborating entity "VectorALU" for hierarchy "Execute:ExecuteStage|VectorALU:aluv" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv Line: 26
+Warning (10036): Verilog HDL or VHDL warning at VectorALU.sv(8): object "overflow" assigned a value but never read File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/VectorALU.sv Line: 8
+Warning (10036): Verilog HDL or VHDL warning at VectorALU.sv(9): object "division_by_zero" assigned a value but never read File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/VectorALU.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at VectorALU.sv(51): truncated value with size 32 to match size of target (16) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/VectorALU.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at VectorALU.sv(56): truncated value with size 32 to match size of target (16) File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/VectorALU.sv Line: 56
+Info (12128): Elaborating entity "flopenrc" for hierarchy "flopenrc:ExecuteMemoryFlipFlop" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 330
+Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:dmem" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 339
+Warning (10850): Verilog HDL warning at DataMemory.sv(9): number of words (60) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv Line: 9
 Warning (10175): Verilog HDL warning at DataMemory.sv(14): ignoring unsupported system task File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv Line: 14
-Info (12128): Elaborating entity "flopenrc" for hierarchy "flopenrc:MemoryWriteBackFlipFlop" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 289
-Info (12128): Elaborating entity "WriteBack" for hierarchy "WriteBack:writeback" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 297
+Info (12128): Elaborating entity "flopenrc" for hierarchy "flopenrc:MemoryWriteBackFlipFlop" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 367
+Info (12128): Elaborating entity "WriteBack" for hierarchy "WriteBack:writeback" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 376
+Warning (10030): Net "VectorReadDataW" at WriteBack.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv Line: 6
+Warning (10030): Net "VectorALUOutW" at WriteBack.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv Line: 6
+Info (12128): Elaborating entity "vectormux2to1" for hierarchy "WriteBack:writeback|vectormux2to1:Vmemtoregmux" File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv Line: 18
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][0]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][10]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][11]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][12]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][13]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][14]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][15]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][1]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][2]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][3]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][4]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][5]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][6]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][7]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][8]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[0][9]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][0]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][10]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][11]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][12]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][13]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][14]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][15]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][1]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][2]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][3]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][4]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][5]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][6]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][7]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][8]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[1][9]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][0]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][10]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][11]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][12]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][13]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][14]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][15]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][1]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][2]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][3]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][4]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][5]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][6]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][7]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][8]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[2][9]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][0]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][10]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][11]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][12]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][13]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][14]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][15]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][1]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][2]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][3]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][4]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][5]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][6]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][7]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][8]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Error (12012): Port direction mismatch for entity "Execute:ExecuteStage" at port "VectorALUResultE[3][9]".  Upper entity is expecting "Input" pin while lower entity is using "Output" pin. File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv Line: 301
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/output_files/TessiaX64.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Wed Nov 22 01:31:51 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:07
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 64 errors, 15 warnings
+    Error: Peak virtual memory: 4798 megabytes
+    Error: Processing ended: Wed Nov 22 07:56:22 2023
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:07
 
 
 +--------------------------------------------+

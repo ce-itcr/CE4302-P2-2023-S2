@@ -2,6 +2,8 @@ module Execute #(parameter WIDTH= 8)(
     input logic clk, reset, ALUSrcE,
     input logic [3:0] ALUControlE,
     input logic [WIDTH-1:0] SrcAE, WriteDataE, ExtImmE,
+    input logic [3:0][15:0] VectorSrcAE, VectorSrcBE,
+	 output logic [3:0][15:0] VectorALUResultE,
     output logic [WIDTH-1:0] ALUResultE,
     output logic [3:0] ALUFlags,
     output logic [WIDTH-1:0] SrcBE
@@ -18,5 +20,9 @@ module Execute #(parameter WIDTH= 8)(
                     .result(ALUResultE),
                     .flags(ALUFlags));
 
+    // ALU
+    VectorALU aluv(.ra1(VectorSrcAE), .ra2(VectorSrcBE),
+                    .ctrl(ALUControlE),
+                    .result(VectorALUResultE));
 
 endmodule

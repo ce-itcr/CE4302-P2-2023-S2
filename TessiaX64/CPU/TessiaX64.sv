@@ -52,6 +52,21 @@ module TessiaX64(
     logic StallF, StallD, FlushD, FlushE;
     logic BranchTakenE;
 
+    logic VectorRegWriteD;
+	logic VectorMemWriteD;
+    logic VectorRegWriteE;
+	logic VectorMemWriteE;
+    logic VectorRegWriteM;
+	logic VectorMemWriteM;
+    logic VectorRegWriteW;
+	logic VectorMemWriteW;
+    logic [3:0][15:0] VectorResultW;
+    logic [3:0][15:0] VectorRD1, VectorRD2;
+    logic [3:0][15:0] VectorRD1E, VectorRD2E;
+    logic [3:0][15:0] VectorALUOutM, VectorALUOutW;
+    logic [3:0][15:0] VectorSrcAE, VectorSrcBE;
+    logic [3:0][15:0] VectorALUResultE;
+
     // Assigments for the TessiaX32 outputs *********************************************
     assign DataToWriteIntoMemory = WriteDataM;
     assign RegisterToWrite = WA3W;
@@ -109,7 +124,7 @@ module TessiaX64(
         .Funct(InstructionD[57:52]),
         .Rd(InstructionD[46:42]), 
         .PCSrcD(PCSrcD), 
-
+        .VectorOp(InstructionD[41:40]),
         .RegWriteD(RegWriteD), 
         .MemToRegD(MemToRegD),  
         .MemWriteD(MemWriteD), 
@@ -118,7 +133,9 @@ module TessiaX64(
         .NoWrite(NoWriteD), 
         .ALUControlD(ALUControlD), 
         .ImmSrcD(ImmSrcD), 
-        .RegSrcD(RegSrcD) 
+        .RegSrcD(RegSrcD),
+        .VectorMemWriteD(VectorMemWriteD),
+        .VectorRegWriteD(VectorRegWriteD)
     );
 
     Decode #(64) DecodeStage(
@@ -136,11 +153,15 @@ module TessiaX64(
         .RD2(RD2), 
         .ExtImmD(ExtImmD),
         .RA1D(RA1D), 
-        .RA2D(RA2D)
+        .RA2D(RA2D),
+        .VectorRD1(VectorRD1),
+        .VectorRD2(VectorRD2),
+        .VectorRegWriteW(VectorRegWriteW),
+        .VectorResultW(VectorResultW)
     );
 
     // Decode - Execute Flip Flop
-    flopenrc #(226) DecodeExecuteFlipFlop(
+    flopenrc #(356) DecodeExecuteFlipFlop(
         .clk(clk), 
         .reset(FlushE), 
         .en(1'b1), 
@@ -160,7 +181,11 @@ module TessiaX64(
             InstructionD[46:42],
             ExtImmD,
             RA1D,
-            RA2D
+            RA2D,
+            VectorRegWriteD,
+            VectorMemWriteD,
+            VectorRD1,
+            VectorRD2
             }), 
         .q({
             PCSrcE,
@@ -178,7 +203,11 @@ module TessiaX64(
             WA3E,
             ExtImmE,
             RA1E,
-            RA2E
+            RA2E,
+            VectorRegWriteE,
+            VectorMemWriteE,
+            VectorRD1E,
+            VectorRD2E
             }));
 
     //***************************** EXECUTE STAGE ***********************************
@@ -215,6 +244,24 @@ module TessiaX64(
         .result(WriteDataE)
     );
 
+    // Vector Forwading Multiplexer for SrcAE
+    vectormux3to1 vforwmulA(
+        .d0(VectorRD1E), 
+        .d1(VectorResultW),
+        .d2(VectorALUOutM),
+        .selection(ForwardAE), 
+        .result(VectorSrcAE)
+    );
+
+    // Vector Forwading Multiplexer for Write Data E
+    vectormux3to1 vforwmulB(
+        .d0(VectorRD2E), 
+        .d1(VectorResultW),
+        .d2(VectorALUOutM),
+        .selection(ForwardBE), 
+        .result(VectorSrcBE)
+    );
+
     HazardUnit hazards(
         .Match_1E_M(RA1E == WA3M ? 1'b1 : 1'b0),
         .Match_1E_W(RA1E == WA3W ? 1'b1 : 1'b0),
@@ -247,10 +294,13 @@ module TessiaX64(
         .WriteDataE(WriteDataE), 
         .ExtImmE(ExtImmE),
         .ALUResultE(ALUResultE),
-        .ALUFlags(ALUFlags)
+        .ALUFlags(ALUFlags),
+        .VectorSrcAE(VectorSrcAE),
+        .VectorSrcBE(VectorSrcBE),
+        .VectorALUResultE(VectorALUResultE)
     );
 
-    flopenrc #(137) ExecuteMemoryFlipFlop(
+    flopenrc #(203) ExecuteMemoryFlipFlop(
         .clk(clk), 
         .reset(reset), 
         .en(1'b1), 
@@ -261,7 +311,10 @@ module TessiaX64(
             MemWriteEout,
             ALUResultE,
             WriteDataE,
-            WA3E
+            WA3E,
+            VectorRegWriteE,
+            VectorMemWriteE,
+            VectorALUResultE
             }), 
         .q({
             PCSrcM,
@@ -270,7 +323,10 @@ module TessiaX64(
             MemWriteM,
             ALUOutM,
             WriteDataM,
-            WA3M
+            WA3M,
+            VectorRegWriteM,
+            VectorMemWriteM,
+            VectorALUOutM
             }));
 
     //***************************** MEMORY STAGE ***********************************
@@ -282,7 +338,7 @@ module TessiaX64(
         .rd(ReadDataM)
     );
 
-    flopenrc #(136) MemoryWriteBackFlipFlop(
+    flopenrc #(202) MemoryWriteBackFlipFlop(
         .clk(clk), 
         .reset(reset), 
         .en(1'b1), 
@@ -292,7 +348,10 @@ module TessiaX64(
             MemToRegM,
             ReadDataM,
             ALUOutM,
-            WA3M
+            WA3M,
+            VectorRegWriteM,
+            VectorMemWriteM,
+            VectorALUOutM
             }), 
         .q({
             PCSrcW,
@@ -300,14 +359,18 @@ module TessiaX64(
             MemToRegW,
             ReadDataW,
             ALUOutW,
-            WA3W
+            WA3W,            
+            VectorRegWriteW,
+            VectorMemWriteW,
+            VectorALUOutW
             })
     );
 
     //***************************** WRITE BACK STAGE ***********************************
     WriteBack #(64) writeback(
         .MemToRegW(MemToRegW),
-        .ReadDataW(ReadDataW), 
+        .ReadDataW(ReadDataW),
+        .VectorMemWriteW(VectorMemWriteW),
         .ALUOutW(ALUOutW),
         .ResultW(ResultW)
     );

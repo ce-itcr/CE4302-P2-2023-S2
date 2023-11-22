@@ -12,199 +12,229 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:50 on Nov 22,2023
+# Start time: 07:33:14 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 05:28:50 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:14 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/flopenrc.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:50 on Nov 22,2023
+# Start time: 07:33:14 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/flopenrc.sv 
 # -- Compiling module flopenrc
 # 
 # Top level modules:
 # 	flopenrc
-# End time: 05:28:50 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:14 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux2to1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:50 on Nov 22,2023
+# Start time: 07:33:14 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux2to1.sv 
 # -- Compiling module mux2to1
 # 
 # Top level modules:
 # 	mux2to1
-# End time: 05:28:50 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:14 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux3to1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:14 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/mux3to1.sv 
 # -- Compiling module mux3to1
 # 
 # Top level modules:
 # 	mux3to1
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:14 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:14 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Fetch/Fetch.sv 
 # -- Compiling module Fetch
 # 
 # Top level modules:
 # 	Fetch
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:14 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/RegisterFile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:14 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/RegisterFile.sv 
 # -- Compiling module RegisterFile
 # 
 # Top level modules:
 # 	RegisterFile
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:14 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ExtendImmediate.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:14 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ExtendImmediate.sv 
 # -- Compiling module ExtendImmediate
 # 
 # Top level modules:
 # 	ExtendImmediate
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:14 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:14 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/TessiaX64.sv 
 # -- Compiling module TessiaX64
 # 
 # Top level modules:
 # 	TessiaX64
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:14 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/InstructionMemory.sv 
 # -- Compiling module InstructionMemory
 # 
 # Top level modules:
 # 	InstructionMemory
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/ControlUnit.sv 
 # -- Compiling module ControlUnit
 # 
 # Top level modules:
 # 	ControlUnit
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/Decode.sv 
 # -- Compiling module Decode
 # 
 # Top level modules:
 # 	Decode
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ALU.sv 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionalUnit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:51 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionalUnit.sv 
 # -- Compiling module ConditionalUnit
 # 
 # Top level modules:
 # 	ConditionalUnit
-# End time: 05:28:51 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionCheck.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:52 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/ConditionCheck.sv 
 # -- Compiling module ConditionCheck
 # 
 # Top level modules:
 # 	ConditionCheck
-# End time: 05:28:52 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:52 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv 
 # -- Compiling module Execute
 # 
 # Top level modules:
 # 	Execute
-# End time: 05:28:52 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards/HazardUnit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:52 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Hazards/HazardUnit.sv 
 # -- Compiling module HazardUnit
 # 
 # Top level modules:
 # 	HazardUnit
-# End time: 05:28:52 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:52 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/WriteBack/WriteBack.sv 
 # -- Compiling module WriteBack
 # 
 # Top level modules:
 # 	WriteBack
-# End time: 05:28:52 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/VectorRegisterFile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:33:15 on Nov 22,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Decode/VectorRegisterFile.sv 
+# -- Compiling module VectorRegisterFile
+# 
+# Top level modules:
+# 	VectorRegisterFile
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/vectormux2to1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:33:15 on Nov 22,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/vectormux2to1.sv 
+# -- Compiling module vectormux2to1
+# 
+# Top level modules:
+# 	vectormux2to1
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/vectormux3to1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:33:15 on Nov 22,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/utils/vectormux3to1.sv 
+# -- Compiling module vectormux3to1
+# 
+# Top level modules:
+# 	vectormux3to1
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:52 on Nov 22,2023
+# Start time: 07:33:15 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Memory/DataMemory.sv 
 # -- Compiling module DataMemory
 # 
 # Top level modules:
 # 	DataMemory
-# End time: 05:28:52 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:15 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches {C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:28:52 on Nov 22,2023
+# Start time: 07:33:16 on Nov 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches" C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv 
 # -- Compiling module TessiaX64_tb
 # 
 # Top level modules:
 # 	TessiaX64_tb
-# End time: 05:28:52 on Nov 22,2023, Elapsed time: 0:00:00
+# End time: 07:33:16 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  TessiaX64_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=""+acc"" TessiaX64_tb 
-# Start time: 05:28:52 on Nov 22,2023
+# Start time: 07:33:16 on Nov 22,2023
 # Loading sv_std.std
 # Loading work.TessiaX64_tb
 # Loading work.TessiaX64
@@ -216,307 +246,32 @@
 # Loading work.ControlUnit
 # Loading work.Decode
 # Loading work.RegisterFile
+# Loading work.VectorRegisterFile
 # Loading work.ExtendImmediate
 # Loading work.ConditionalUnit
 # Loading work.ConditionCheck
 # Loading work.mux3to1
+# Loading work.vectormux3to1
 # Loading work.HazardUnit
 # Loading work.Execute
 # Loading work.ALU
+# ** Error: (vsim-3033) C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv(24): Instantiation of 'VectorALU' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /TessiaX64_tb/DUT/ExecuteStage File: C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/CPU/Execute/Execute.sv
+#         Searched libraries:
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cycloneiv_hssi
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cycloneiv_pcie_hip
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cycloneiv
+#             C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/simulation/modelsim/rtl_work
+#             C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/simulation/modelsim/rtl_work
 # Loading work.DataMemory
 # Loading work.WriteBack
-# 
-# add wave *
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: kevii  Hostname: ACEVEDO-001-PRI  ProcessID: 24772
-#           Attempting to use alternate WLF file "./wlftgh3fhw".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftgh3fhw
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# R 1 =                    1
-# 
-# R 1 =                    1
-# 
-# R 1 =                    1
-# 
-# R 0 =                    3
-# 
-# R10 =                   20
-# 
-# R 2 =                    1
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   1] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   1] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                    2
-# 
-# R 2 =                    2
-# 
-# R 3 =                    6
-# 
-# MEMORY[                   2] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   2] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                    3
-# 
-# R 2 =                    3
-# 
-# R 3 =                    9
-# 
-# MEMORY[                   3] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   3] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                    4
-# 
-# R 2 =                    4
-# 
-# R 3 =                   12
-# 
-# MEMORY[                   4] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   4] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                    5
-# 
-# R 2 =                    5
-# 
-# R 3 =                   15
-# 
-# MEMORY[                   5] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   5] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                    6
-# 
-# R 2 =                    6
-# 
-# R 3 =                   18
-# 
-# MEMORY[                   6] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   6] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                    7
-# 
-# R 2 =                    7
-# 
-# R 3 =                   21
-# 
-# MEMORY[                   7] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   7] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                    8
-# 
-# R 2 =                    8
-# 
-# R 3 =                   24
-# 
-# MEMORY[                   8] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   8] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                    9
-# 
-# R 2 =                    9
-# 
-# R 3 =                   27
-# 
-# MEMORY[                   9] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                   9] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   10
-# 
-# R 2 =                   10
-# 
-# R 3 =                   30
-# 
-# MEMORY[                  10] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  10] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   11
-# 
-# R 2 =                   11
-# 
-# R 3 =                   33
-# 
-# MEMORY[                  11] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  11] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   12
-# 
-# R 2 =                   12
-# 
-# R 3 =                   36
-# 
-# MEMORY[                  12] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  12] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   13
-# 
-# R 2 =                   13
-# 
-# R 3 =                   39
-# 
-# MEMORY[                  13] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  13] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   14
-# 
-# R 2 =                   14
-# 
-# R 3 =                   42
-# 
-# MEMORY[                  14] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  14] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   15
-# 
-# R 2 =                   15
-# 
-# R 3 =                   45
-# 
-# MEMORY[                  15] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  15] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   16
-# 
-# R 2 =                   16
-# 
-# R 3 =                   48
-# 
-# MEMORY[                  16] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  16] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   17
-# 
-# R 2 =                   17
-# 
-# R 3 =                   51
-# 
-# MEMORY[                  17] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  17] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   18
-# 
-# R 2 =                   18
-# 
-# R 3 =                   54
-# 
-# MEMORY[                  18] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  18] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   19
-# 
-# R 2 =                   19
-# 
-# R 3 =                   57
-# 
-# MEMORY[                  19] =                    3
-# 
-# R 3 =                    3
-# 
-# MEMORY[                  19] =                    3
-# 
-# R 4 =                    3
-# 
-# R 1 =                   20
-# 
-# R 1 =                  120
-# 
-# R 1 =                  220
-# 
-# ** Note: $stop    : C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv(59)
-#    Time: 10001 ps  Iteration: 0  Instance: /TessiaX64_tb
-# Break in Module TessiaX64_tb at C:/Users/kevii/OneDrive/Escritorio/GitHub/CE4302-P2-2023-S2/TessiaX64/Testbenches/TessiaX64_tb.sv line 59
+# Loading work.vectormux2to1
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./TessiaX64_run_msim_rtl_verilog.do PAUSED at line 32
